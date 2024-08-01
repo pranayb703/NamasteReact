@@ -1,42 +1,42 @@
-.header{
-    display: flex;
-    background-color: aquamarine;
-    justify-content: space-between;
-    border: 1px black solid;
+.header {
+  display: flex;
+  background-color: aquamarine;
+  justify-content: space-between;
+  border: 1px black solid;
 }
 .logo {
-    width: 200px;
-    border: 5px slateblue solid;
+  width: 200px;
+  border: 5px slateblue solid;
 }
-.nav-items > ul{
-    list-style: none;
-    display: inline-flex;
+.nav-items > ul {
+  list-style: none;
+  display: inline-flex;
 }
 .nav-items > ul > li {
-    padding: 0px 20px;
-    margin : 10px;
+  padding: 0px 20px;
+  margin: 10px;
 }
-.search{
-    padding: 10px;
+.search {
+  padding: 10px;
 }
-.res-img{
-    width: 195px;
-    height: 150px;
+.res-img {
+  width: 195px;
+  height: 150px;
 }
-.res-container{
-    display: flex;
-    margin: 5px;
-    flex-wrap: wrap;
+.res-container {
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
 }
-.res-card{
-    padding: 5px ;
-    margin: 5px;
-    width: 200px;
-    background-color: lightgray;
+.res-card {
+  padding: 5px;
+  margin: 5px;
+  width: 200px;
+  background-color: lightgray;
 }
 
-.res-card:hover{
-    cursor: pointer;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px 5px grey;
 }
