@@ -2029,7 +2029,7 @@ const resList = {
     return (
         <div className="res-card">
             <img alt="BB" className="res-img" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}></img>
-            <h3>{baseLink.name}</h3>
+            <h3>{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
             <h5>{avgRating} stars</h5>
         </div>
@@ -2042,7 +2042,7 @@ const Body = () => {
         <div className="search">Search</div>
         <div className="res-container" >
             {
-                resList.data.restaurants.map( (restaurant) => (<RestaurantCard resObj = {restaurant}/>) )
+                resList.data.restaurants.map( (restaurant) => (<RestaurantCard key={restaurant.info.id} resObj = {restaurant}/>) )
             }
         </div>
     

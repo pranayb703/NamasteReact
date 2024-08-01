@@ -33,10 +33,10 @@
     margin: 5px;
     width: 200px;
     background-color: lightgray;
-    border: 1px solid black ;
 }
 
-.res-card :hover{
+.res-card:hover{
     cursor: pointer;
-    border: 2px solid red;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px grey;
 }
