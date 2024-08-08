@@ -1,6 +1,7 @@
 import { CDN_URL } from "../../utils/constants";
 
 const RestaurantCard = ({ resObj }) => {
+  //console.log("ResObj " + JSON.stringify(resObj.info.name));
   const { name, avgRating, cuisines, cloudinaryImageId } = resObj?.info;
   return (
     <div className="res-card">
