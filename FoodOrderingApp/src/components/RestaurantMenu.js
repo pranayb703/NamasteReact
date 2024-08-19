@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { MENU_URL } from "../../utils/constants";
 import Shimmer from "./Shimmer";
-import { useParams } from "react-router-dom";
+import { json, useParams } from "react-router-dom";
+import Header from './Header';
 
 const RestaurantMenu = () => {
   console.log("Lets get the data first");
   const { resId } = useParams();
   console.log("useParams : ", resId);
+  const [resName, setName] = useState(null);
   const [resInfo, setResInfo] = useState(null);
   const [resSubwayInfo, setResSubwayInfo] = useState(null);
 
@@ -22,10 +24,10 @@ const RestaurantMenu = () => {
     //URL USED :  // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=78036",
     const data = await fetch(MENU_URL + resId);
     const json = await data.json();
-    console.log(
-      "🚀 ~ fetchMenu ~ json:",
-      json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card,
-    );
+    console.log("🚀 ~ fetchMenu ~ json:", json.data.cards[0].card.card.text);
+    //resName = json.data.cards[0].card.card.text;
+
+    setName(json.data.cards[0].card.card.text);
     setResInfo(
       json.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
         ?.card,
@@ -49,21 +51,16 @@ const RestaurantMenu = () => {
   const menuMap = itemCards === undefined ? subwayItemCards : itemCards;
   console.log("🚀 ~ RestaurantMenu ~ menuMap:", menuMap);
 
-  //const { itemCategory } = resInfo.categories[0];
+  // const { name } = resInfo?.data;
+  // console.log("🚀 ~ RestaurantMenu ~ name:", name);
+  console.log("🚀 ~ fetchMenu ~ resName:", resName);
 
-  // if (!resInfo.itemCards) {
-  //   console.log("ResInfo.ItemCards");
-  //   console.log("resInfo", resInfo.categories[0].itemCards[0].card.info.name);
-  //   const { itemCategory } = resInfo.categories[0];
-  // }
-
-  //URL
-  //https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=28405&catalog_qa=undefined&submitAction=ENTER
   return (
-    <div>
+    <div className="bg-red-100 justify-center items-center">
+      <h2 className="font-extrabold font-sans text-xl shadow">{resName}</h2>
       <ul>
         {menuMap.map((item) => (
-          <li>
+          <li className="">
             {item.card.info.name} - Rs.{" "}
             {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
           </li>

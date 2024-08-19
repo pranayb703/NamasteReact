@@ -3,6 +3,7 @@ import resList from "../../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 const Body = () => {
   //UseState -> Maintains the state of the component
@@ -13,6 +14,8 @@ const Body = () => {
   const [filteredList, setFilteredList] = useState([]);
 
   const [searchTxt, setSearchTxt] = useState("");
+
+  const onlineStatus = useOnlineStatus();
 
   //UseEffect -> It is called after the component is rendered
   //UseEffect -> If no dependency array it will be called on every time it is renedered
@@ -42,21 +45,24 @@ const Body = () => {
         ?.restaurants,
     );
   };
+
+  if (onlineStatus === false) return <h1>No Internet Connection</h1>;
   if (resLists.length === 0) {
     return <Shimmer />;
   }
   return (
     <div className="body">
-      <div className="filter">
+      <div className="filter m-4 px-4">
         <input
           type="text"
-          className="search-box"
+          className="border border-solid border-blue-950 focus:bg-cyan-100    "
           value={searchTxt}
           onChange={(e) => {
             setSearchTxt(e.target.value);
           }}
         ></input>
         <button
+          className=" bg-gray-400 border border-solid border-black rounded-lg px-4 mx-4 hover:bg-orange-200"
           onClick={() => {
             const filteredList = resLists.filter((value) => {
               return value.info.name
@@ -71,7 +77,7 @@ const Body = () => {
           Search
         </button>
         <button
-          className="filter-btn"
+          className="filter-btn bg-gray-400 border border-solid border-black rounded-lg px-4 mx-4 hover:bg-orange-200"
           onClick={() => {
             const filteredList = resLists.filter((value) => {
               console.log("Value : ", value.info.avgRating);
@@ -85,7 +91,7 @@ const Body = () => {
           Top Rated Restaurant
         </button>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap m-2 p-2">
         {/* {resList.data.restaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resObj={restaurant} />
         ))} */}
