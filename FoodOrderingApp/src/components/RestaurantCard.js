@@ -27,10 +27,9 @@ const RestaurantCard = ({ resObj }) => {
 //Higher Order Component -> Input -> RestaurantCard and Output-> RestaurantCardWithDeal
 export const withDealLabel = (RestaurantCard) => {
   return (props) => {
-    
     return (
       <div>
-        <label className="bg-black text-white absolute p-1 mx-1 rounded-lg">
+        <label className="bg-green-600 text-white absolute p-1 mx-1 rounded-lg">
           Open
         </label>
         <RestaurantCard {...props} />

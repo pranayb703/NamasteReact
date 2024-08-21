@@ -1,7 +1,7 @@
 import { CDN_URL } from "../../utils/constants";
 
 const ItemList = ({ items }) => {
-  console.log(items);
+  //console.log(items);
 
   return (
     <div className="">
@@ -10,27 +10,38 @@ const ItemList = ({ items }) => {
           className="p-2 m-2 border-gray-400 border-b-2"
           key={item.card.info.id}
         >
-
           <div className="flex justify-between">
-            <img className="w-28 h-28" src={CDN_URL + item.card.info.imageId}></img>
+            <button className="absolute bg-black text-white p-1 rounded-lg cursor-pointer">
+              {" "}
+              +Add
+            </button>
+            <img
+              className="w-28 h-28"
+              src={CDN_URL + item.card.info.imageId}
+            ></img>
             <span className="mx-1 shadow-sm">
               {item.card.info.isVeg === 1 ? "🟢" : "🔴"}
             </span>
-            <span className="mx-2 font-extrabold font-sans">{item.card.info.name}</span>
+            <span className="mx-2 font-extrabold font-sans">
+              {item.card.info.name}
+            </span>
 
             <span className="mx-2 font-light ">
-              Rs.{item.card.info.price / 100 || item.card.info.defaultPrice/100}
+              Rs.
+              {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
             </span>
-            
           </div>
           <div>
-            <span className="text-sm">{item.card.info.description ? item.card.info.description : "Check with the restaurant!" }</span>
+            <span className="text-sm">
+              {item.card.info.description
+                ? item.card.info.description
+                : "Check with the restaurant!"}
+            </span>
           </div>
         </div>
       ))}
     </div>
   );
 };
-
 
 export default ItemList;

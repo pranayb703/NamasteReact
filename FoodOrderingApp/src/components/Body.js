@@ -1,6 +1,6 @@
 import RestaurantCard, { withDealLabel } from "./RestaurantCard";
 import resList from "../../utils/mockData";
-import { useEffect, useState , useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
@@ -31,7 +31,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0908063&lng=72.9076669&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0908063&lng=72.9076669&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
 
@@ -42,24 +42,22 @@ const Body = () => {
     // );
 
     setResLists(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants,
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredList(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants,
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
   if (onlineStatus === false) return <h1>No Internet Connection</h1>;
 
-  const {loggedInUser,setUserName} = useContext(UserContext);
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   if (resLists.length === 0) {
     return <Shimmer />;
   }
   return (
-    <div className="body bg-red-200" >
+    <div className="body bg-red-200">
       <div className="filter p-4 text-center">
         <input
           type="text"
@@ -99,9 +97,13 @@ const Body = () => {
           Top Rated Restaurant
         </button>
         <label>UserName</label>
-        <input className="w-20 p-1" value={loggedInUser} onChange={(e)=>{
-          setUserName(e.target.value);
-        }}></input>
+        <input
+          className="w-20 p-1"
+          value={loggedInUser}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        ></input>
       </div>
       <div className="res-container flex flex-wrap m-2 p-2">
         {/* {resList.data.restaurants.map((restaurant) => (
@@ -114,12 +116,12 @@ const Body = () => {
             to={"/restaurants/" + restaurant.info.id}
           >
             <h3>{restaurant.info.isOpen}</h3>
-       
-            { restaurant.info.isOpen ?  (
+
+            {restaurant.info.isOpen ? (
               <RestaurantCardDeal resObj={restaurant} />
             ) : (
               <RestaurantCard resObj={restaurant} />
-            )} 
+            )}
           </Link>
         ))}
       </div>
