@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 const Header = () => {
   // const btnName = "Login";
 
@@ -10,11 +11,13 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  useEffect(() => {
-    //console.log("Use effect header");
-  }, [btnName]);
+  const data = useContext(UserContext);
+
+  // useEffect(() => {
+  //   //console.log("Use effect header");
+  // }, [btnName]);
   return (
-    <div className="header flex bg-blue-100 items-center">
+    <div className="header flex bg-red-500 text-white items-center">
       <div className="logo-container">
         <img className="logo w-32 rounded-lg m-4" src={LOGO_URL} />
       </div>
@@ -38,6 +41,7 @@ const Header = () => {
           <li className="mx-2 px-2 rounded-lg hover:bg-blue-500 hover:text-white ">
             Cart
           </li>
+
           <li className="mx-2 px-2">
             <button
               onClick={() => {
@@ -51,6 +55,9 @@ const Header = () => {
             >
               {btnName}
             </button>
+          </li>
+          <li className="mx-2 px-2 rounded-lg hover:bg-blue-500 hover:text-white ">
+            {data.loggedInUser}
           </li>
         </ul>
       </div>

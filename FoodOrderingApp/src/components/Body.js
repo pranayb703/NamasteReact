@@ -1,9 +1,10 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withDealLabel } from "./RestaurantCard";
 import resList from "../../utils/mockData";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 const Body = () => {
   //UseState -> Maintains the state of the component
@@ -16,6 +17,8 @@ const Body = () => {
   const [searchTxt, setSearchTxt] = useState("");
 
   const onlineStatus = useOnlineStatus();
+
+  const RestaurantCardDeal = withDealLabel(RestaurantCard);
 
   //UseEffect -> It is called after the component is rendered
   //UseEffect -> If no dependency array it will be called on every time it is renedered
@@ -34,8 +37,10 @@ const Body = () => {
 
     // console.log(
     //   "JSON ",
-    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants,
+    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+    //     ?.restaurants,
     // );
+
     setResLists(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants,
@@ -47,22 +52,25 @@ const Body = () => {
   };
 
   if (onlineStatus === false) return <h1>No Internet Connection</h1>;
+
+  const {loggedInUser,setUserName} = useContext(UserContext);
+
   if (resLists.length === 0) {
     return <Shimmer />;
   }
   return (
-    <div className="body">
-      <div className="filter m-4 px-4">
+    <div className="body bg-red-200" >
+      <div className="filter p-4 text-center">
         <input
           type="text"
-          className="border border-solid border-blue-950 focus:bg-cyan-100    "
+          className="border border-solid border-blue-950 focus:bg-cyan-100 rounded-lg p-1"
           value={searchTxt}
           onChange={(e) => {
             setSearchTxt(e.target.value);
           }}
         ></input>
         <button
-          className=" bg-gray-400 border border-solid border-black rounded-lg px-4 mx-4 hover:bg-orange-200"
+          className=" bg-gray-200 border border-solid border-black rounded-lg px-4 mx-4 hover:bg-orange-200"
           onClick={() => {
             const filteredList = resLists.filter((value) => {
               return value.info.name
@@ -77,10 +85,10 @@ const Body = () => {
           Search
         </button>
         <button
-          className="filter-btn bg-gray-400 border border-solid border-black rounded-lg px-4 mx-4 hover:bg-orange-200"
+          className="filter-btn bg-gray-100 border border-solid border-black rounded-lg px-4 mx-4 hover:bg-orange-200"
           onClick={() => {
             const filteredList = resLists.filter((value) => {
-              console.log("Value : ", value.info.avgRating);
+              // console.log("Value : ", value.info.avgRating);
               return value.info.avgRating > 4.5;
             });
             //console.log("Top list : " + JSON.stringify(filteredList));
@@ -90,6 +98,10 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+        <label>UserName</label>
+        <input className="w-20 p-1" value={loggedInUser} onChange={(e)=>{
+          setUserName(e.target.value);
+        }}></input>
       </div>
       <div className="res-container flex flex-wrap m-2 p-2">
         {/* {resList.data.restaurants.map((restaurant) => (
@@ -101,7 +113,13 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resObj={restaurant} />
+            <h3>{restaurant.info.isOpen}</h3>
+       
+            { restaurant.info.isOpen ?  (
+              <RestaurantCardDeal resObj={restaurant} />
+            ) : (
+              <RestaurantCard resObj={restaurant} />
+            )} 
           </Link>
         ))}
       </div>

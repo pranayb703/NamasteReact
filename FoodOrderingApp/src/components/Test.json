@@ -1,0 +1,507 @@
+{
+  "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+  "title": "Snack",
+  "itemCards": [
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "96501725",
+          "name": "Puri Bhaji - 5 Puris",
+          "category": "Snack",
+          "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/7/6e1d9223-567b-4a86-be27-d129426aad63_c6465497-a50b-4a2f-8cb6-f31c50848622.png",
+          "inStock": 1,
+          "isVeg": 1,
+          "price": 13500,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341220",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {
+            "text": "Bestseller",
+            "textColor": "#ffffff",
+            "topBackgroundColor": "#d53d4c",
+            "bottomBackgroundColor": "#b02331"
+          },
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "isBestseller": true,
+          "ratings": {
+            "aggregatedRating": {
+              "rating": "4.4",
+              "ratingCount": "365 ratings",
+              "ratingCountV2": "365"
+            }
+          }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    },
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "96501723",
+          "name": "Sabudana Vada",
+          "category": "Snack",
+          "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/7/5f72997d-040c-4516-9ef3-55b3aef600b0_8270fd9e-2dc3-4f2e-b77e-dfdc856d24ac.png",
+          "inStock": 1,
+          "isVeg": 1,
+          "price": 12600,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341172",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {},
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "ratings": {
+            "aggregatedRating": {
+              "rating": "4.1",
+              "ratingCount": "117 ratings",
+              "ratingCountV2": "117"
+            }
+          }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    },
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "3387981",
+          "name": "Sheera",
+          "category": "Snack",
+          "inStock": 1,
+          "isVeg": 1,
+          "price": 9000,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341176",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {},
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "ratings": {
+            "aggregatedRating": {
+              "rating": "4.4",
+              "ratingCount": "1495 ratings",
+              "ratingCountV2": "1495"
+            }
+          }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    },
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "142403952",
+          "name": "Sabudana Khichdi",
+          "category": "Snack",
+          "inStock": 1,
+          "isVeg": 1,
+          "price": 12600,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341258",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {},
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "ratings": { "aggregatedRating": {} }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    },
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "98674447",
+          "name": "Finger Chips",
+          "category": "Snack",
+          "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/7/d2fccc18-5835-4a47-992a-033c7859bfa2_e6b2fb97-eabf-403a-9414-7548e3f4144d.png",
+          "inStock": 1,
+          "isVeg": 1,
+          "price": 10800,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341232",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {},
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "ratings": {
+            "aggregatedRating": {
+              "rating": "4.7",
+              "ratingCount": "95 ratings",
+              "ratingCountV2": "95"
+            }
+          }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    },
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "83796474",
+          "name": "Lemon Sevai",
+          "category": "Snack",
+          "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/7/a49da64e-adbd-4a8b-a5b0-477d6fd65ae4_c9ee5882-a73c-4b3a-992c-43184d5702b8.png",
+          "inStock": 1,
+          "isVeg": 1,
+          "price": 8100,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341247",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {},
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "ratings": {
+            "aggregatedRating": {
+              "rating": "4.3",
+              "ratingCount": "43 ratings",
+              "ratingCountV2": "43"
+            }
+          }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    },
+    {
+      "card": {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+        "info": {
+          "id": "3387980",
+          "name": "Upma",
+          "category": "Snack",
+          "isVeg": 1,
+          "price": 8100,
+          "variants": {},
+          "variantsV2": {},
+          "addons": [
+            {
+              "groupId": "160341264",
+              "groupName": "Extra Add On",
+              "choices": [
+                {
+                  "id": "119424693",
+                  "name": "Dal Wada",
+                  "price": 9000,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424696",
+                  "name": "Gulab Jamun",
+                  "price": 3600,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424695",
+                  "name": "Sheera",
+                  "price": 7200,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                },
+                {
+                  "id": "119424694",
+                  "name": "Dahi Wada",
+                  "price": 9900,
+                  "inStock": 1,
+                  "isVeg": 1,
+                  "isEnabled": 1
+                }
+              ],
+              "maxAddons": 1,
+              "maxFreeAddons": -1
+            }
+          ],
+          "nextAvailableAtMessage": "Next available at 10:48 am, tomorrow",
+          "itemAttribute": { "vegClassifier": "VEG" },
+          "ribbon": {},
+          "type": "ITEM",
+          "itemBadge": {},
+          "badgesV2": {},
+          "ratings": {
+            "aggregatedRating": {
+              "rating": "4.5",
+              "ratingCount": "747 ratings",
+              "ratingCountV2": "747"
+            }
+          }
+        },
+        "analytics": {},
+        "hideRestaurantDetails": true
+      }
+    }
+  ]
+}
