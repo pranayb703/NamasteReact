@@ -5,6 +5,8 @@ const RestaurantCard = ({ resObj }) => {
     return null; // or some default value
   }
 
+  console.log(resObj);
+
   const { info } = resObj;
   if (!info) {
     return null; // or some default value
@@ -14,7 +16,10 @@ const RestaurantCard = ({ resObj }) => {
     resObj?.info;
   //console.log(aggregatedDiscountInfoV3.discountTag);
   return (
-    <div className="res-card w-48 bg-gray-200 border-solid border-black shadow-md m-2 p-2 rounded-lg text-black hover:bg-gray-900 hover:text-white">
+    <div
+      data-testid="resCard"
+      className="res-card w-48 bg-gray-200 border-solid border-black shadow-md m-2 p-2 rounded-lg text-black hover:bg-gray-900 hover:text-white"
+    >
       <img alt="BB" className="res-img" src={CDN_URL + cloudinaryImageId}></img>
       <h3 className="font-extrabold">{name}</h3>
       <h5 className="font-light">{cuisines.join(", ")}</h5>

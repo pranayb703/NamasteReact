@@ -1,12 +1,27 @@
 import React from "react";
-import About from "./About";
 
 const Contact = () => {
   return (
-    <div className="flext bg-gray-100 font-bold items-center m-auto text-center">
+    <div className=" bg-gray-100 font-bold m-auto ">
       Contact
-      <div className="bg-gray-200 m-auto border-solid border-2 border-sky-500 w-6/12 text-center ">
-        Contact us: <b>pranayb.27@gmail.com</b>
+      <div className="m-auto w-6/12">
+        <form className="bg-gray-100 items-center m-auto ">
+          <input
+            type="text"
+            placeholder="Name"
+            className="border border-solid p-2 m-2 rounded-lg"
+          ></input>
+
+          <input
+            type="text"
+            placeholder="Message"
+            className="border border-solid p-2 m-2 rounded-lg"
+          ></input>
+
+          <button className="bg-blue-800 rounded-lg text-white p-2 m-2">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );

@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
 import { LOGO_URL } from "../../utils/constants";
 import { Link } from "react-router-dom";
-import Contact from "./Contact";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "../../utils/UserContext";
+import { useSelector } from "react-redux";
 const Header = () => {
   // const btnName = "Login";
+
+  //Subscribing to the store
+  const cartItems = useSelector((store) => store.cart.items);
 
   const [btnName, setBtnName] = useState("Login");
 
@@ -39,7 +42,7 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className="mx-2 px-2 rounded-lg hover:bg-blue-500 hover:text-white ">
-            Cart
+            <Link to="/cart">Cart-{cartItems.length} Items</Link>
           </li>
 
           <li className="mx-2 px-2">

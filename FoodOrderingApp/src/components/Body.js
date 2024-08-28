@@ -44,6 +44,7 @@ const Body = () => {
     setResLists(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+
     setFilteredList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -61,6 +62,7 @@ const Body = () => {
       <div className="filter p-4 text-center">
         <input
           type="text"
+          data-testid="searchInput"
           className="border border-solid border-blue-950 focus:bg-cyan-100 rounded-lg p-1"
           value={searchTxt}
           onChange={(e) => {
@@ -96,8 +98,9 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
-        <label>UserName</label>
+        <label className="p-2 mx-2">UserName</label>
         <input
+          type="text"
           className="w-20 p-1"
           value={loggedInUser}
           onChange={(e) => {
